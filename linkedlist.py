@@ -1,21 +1,11 @@
-class Node:
-    def __init__(self, value=None):
-        self.value = value
-        self.next_node = None
-    def set_next_node(self,next_node):
-        self.next_node = next_node
-    def get_next_node(self):
-        return self.next_node
-    def get_value(self):
-        return self.value
-
+import node
 class LinkedList:
     def __init__(self):
         self.head_node = None
     def get_head_node(self):
         return self.head_node
     def insert_beginning(self, new_value):
-        new_node = Node(new_value)
+        new_node = node.Node(new_value)
         new_node.set_next_node(self.head_node)
         self.head_node = new_node
 
@@ -29,7 +19,7 @@ class LinkedList:
         return string_list
 
     def append(self, value):
-        new_node = Node(value)
+        new_node = node.Node(value)
         current_node = self.get_head_node()
         if not self.head_node:
             self.head_node = new_node
