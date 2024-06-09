@@ -1,6 +1,7 @@
 # Two pointers moving in parrell
 # For example -> Given a linked list with the following elements: 1 -> 2 -> 3 -> 4 -> 5, return to the 2nd to last element (4). In order to do this, you'll need some way of knowing how far away the 2nd to last element is from the end of the list. You can use two pointers to solve this problem.
 # Time Complexity: O(n) -> space being allocated
+
 import linkedlist
 import node
 
@@ -26,6 +27,7 @@ def list_nth_last(linked_list, n):
 #    else
 #       move nth last pointer to the next node
 # return nth last pointer
+
 def nth_last_node(linked_list, n):
     current_node = None
     tail_seeker = linked_list.head_node
@@ -58,6 +60,7 @@ def nth_last_node(linked_list, n):
         # move fast pointer to the next node
         # move slow pointer to the next node
 # return slow pointer
+
 def find_middle(linked_list):
     fast = linked_list.head_node
     slow = linked_list.head_node
